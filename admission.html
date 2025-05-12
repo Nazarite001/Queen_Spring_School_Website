@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Admission Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="admission.css">
+</head>
+<body>
+    <section class="admission" id="admission">
+        <h1 class="heading">Queen Springs Admission Form</h1>
+        <div class="container">
+            <form action="https://formspree.io/f/mvgaqljo" method="POST">
+                <div class="form-group">
+                    <label for="student-name">Student's Full Name</label>
+                    <input type="text" id="student-name" name="student_name" placeholder="Enter full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender" required>
+                        <option value="" disabled selected>Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="parent-name">Parent/Guardian's Name</label>
+                    <input type="text" id="parent-name" name="parent_name" placeholder="Enter parent/guardian's name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter email address" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Home Address</label>
+                    <textarea id="address" name="address" placeholder="Enter home address" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="class">Class Applying For</label>
+                    <select id="class" name="class" required>
+                        <option value="" disabled selected>Select Class</option>
+                        <option value="creche">Creche</option>
+                        <option value="nursery">Nursery</option>
+                        <option value="primary">Primary</option>
+                        <option value="secondary">Secondary</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Additional Information</label>
+                    <textarea id="message" name="message" placeholder="Enter any additional information" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn">
+                    <span class="text text-1">Submit Application</span>
+                    <span class="text text-2" aria-hidden="true">Submit Application</span>
+                </button>
+            </form>
+            <!-- New button to return to index.html -->
+        <div class="back-button">
+            <a href="index.html" class="btn">
+                <span class="text text-1">Back to Home</span>
+                <span class="text text-2" aria-hidden="true">Back to Home</span>
+            </a>
+        
+    </div>
+
+        </div>
+    </section>
+</body>
+</html>

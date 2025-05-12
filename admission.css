@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.admission {
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admission .heading {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #004080;
+    margin-bottom: 30px;
+}
+
+.admission .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.admission form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.admission .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.admission .form-group label {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.admission .form-group input,
+.admission .form-group select,
+.admission .form-group textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.admission .form-group input:focus,
+.admission .form-group select:focus,
+.admission .form-group textarea:focus {
+    border-color: #004080;
+}
+
+.admission .btn {
+    padding: 15px;
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.admission .btn:hover {
+    background-color: #003060;
+}
+
+.admission .btn .text {
+    display: inline-block;
+    position: relative;
+}
+
+.admission .btn .text-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.admission .btn:hover .text-2 {
+    opacity: 1;
+}

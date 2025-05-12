@@ -150,8 +150,12 @@ section{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	flex-wrap: nowrap;
+
 	padding: 2rem 9%;
 }
+
+
 
 .header .logo {
 	font-size: 2.5rem;
@@ -258,15 +262,32 @@ section{
 	color: var(--black);
 	cursor: pointer;
 }
+.contact-info {
+    font-size: 1.5rem;
+    color: #004080;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.contact-info i {
+    color: #004080;
+    font-size: 1.8rem;
+}
 
 .home {
-	min-height: 100vh;
-	display: flex;
-	align-items: center;
-	background: url('../images/home.jpg') no-repeat;
-	background-size: cover;
-	background-position: center
+	background-image: url('../images/homes.jpeg');
+	background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out; /* Smooth transition between images */
 }
+
 
 .home .content {
 	max-width: 50%;
@@ -274,16 +295,34 @@ section{
 
 .home .content h3 {
 	font-size: 5rem;
+	font-weight: 700;
 	color: var(--white);
 	line-height: 1.2;
 }
 
 .home .content p {
 	font-size: 1.5rem;
+	font-weight: 500;
 	line-height: 2;
 	color: var(--white);
 	padding: 1rem 0;
 }
+* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+
 
 .about .container {
 	display: flex;
@@ -296,7 +335,7 @@ section{
 }
 
 .about .container .about-image img {
-	width: 80%;
+	width: 100%;
 }
 
 .about .container .about-image .about-img {
@@ -316,10 +355,18 @@ section{
 .about .container .about-content h3 {
 	font-size: 3rem;
 	color: var(--primary-color);
+	padding-left: 100px;
 
 }
+.about .logo{
+  
+    max-width: 50%; /* Adjust the width to fit better */
+    height: auto; /* Maintain aspect ratio */
+  }
 
 .about .container .about-content p {
+	font-style: poppins;
+	font-weight: 800;
 	font-size: 1.6rem;
 	color: #444;
 	padding: 1rem 0;
@@ -686,6 +733,169 @@ section{
 	padding: 1rem 0;
 }
 
+/* Prefects Section */
+.prefects {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.prefects .heading {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.prefects .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.prefects .box {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.prefects .box:hover {
+    transform: translateY(-10px);
+}
+
+.prefects .box .image img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.prefects .box .content {
+    padding: 15px;
+}
+
+.prefects .box .content h3 {
+    font-size: 1.5rem;
+    color: #004080;
+    margin-bottom: 5px;
+}
+
+.prefects .box .content span {
+    font-size: 1rem;
+    color: #555;
+}
+
+
+
+
+
+/* Meet the Chairman Section */
+.chairman {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.chairman .heading {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.chairman .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.chairman .image {
+    flex: 1 1 300px;
+    max-width: 400px;
+}
+
+.chairman .image img {
+    height: 50rem;
+	width: 35rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chairman .content {
+    flex: 1 1 400px;
+    max-width: 600px;
+    text-align: left;
+}
+
+.chairman .content h3 {
+    font-size: 2.5rem; /* Increased font size for a more professional look */
+    color: #004080;
+    font-weight: bold; /* Added bold styling for emphasis */
+    margin-bottom: 20px; /* Slightly increased spacing */
+}
+
+.chairman .content p {
+    font-size: 1.9rem; /* Increased font size for better readability */
+    color: #444; /* Slightly darker color for better contrast */
+    line-height: 2; /* Increased line height for improved spacing */
+    margin-bottom: 20px; /* Increased spacing between paragraphs */
+}
+
+.proprietress {
+	padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.proprietress .heading {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.proprietress .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.proprietress .image {
+    flex: 1 1 300px;
+    max-width: 400px;
+}
+
+.proprietress .image img {
+    height: 50rem;
+	width: 40rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.proprietress .content {
+    flex: 1 1 400px;
+    max-width: 600px;
+    text-align: left;
+}
+
+.proprietress .content h3 {
+    font-size: 2.5rem; /* Increased font size for a more professional look */
+    color: #004080;
+    font-weight: bold; /* Added bold styling for emphasis */
+    margin-bottom: 20px; /* Slightly increased spacing */
+}
+
+.proprietress .content p {
+    font-size: 1.9rem; /* Increased font size for better readability */
+    color: #444; /* Slightly darker color for better contrast */
+    line-height: 2; /* Increased line height for improved spacing */
+    margin-bottom: 20px; /* Increased spacing between paragraphs */
+}
+
+
 .contact .row {
 	display: flex;
 	flex-wrap: wrap;
@@ -798,6 +1008,233 @@ section{
 	border-top: .1rem solid var(--primary-color);
 }
 
+@media (max-width: 991px) and (orientation: landscape) {
+  img[src="images/logos.jpeg"] {
+    max-width: 50%; /* Adjust the width to fit better */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure proper alignment */
+    margin: 0 auto; /* Center the image */
+  }
+.about .container {
+		display: flex;
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center-align content */
+
+
+}
+
+    .about .container .about-content {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+.proprietress .container {
+    display: flex; /* Enable flexbox for side-by-side layout */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    align-items: flex-start; /* Align items vertically */
+    justify-content: space-between; /* Add space between the image and content */
+    gap: 20px; /* Add spacing between items */
+  }
+
+  .proprietress .image {
+    flex: 1 1 40%; /* Allow the image to take 40% of the width */
+    max-width: 400px; /* Set a maximum width for the image */
+	
+  }
+
+  .proprietress .content {
+    flex: 1 1 55%; /* Allow the content to take 55% of the width */
+    text-align: left; /* Align text to the left */
+  }
+  
+.chairman .container {
+    display: flex; /* Enable flexbox for side-by-side layout */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    align-items: flex-start; /* Align items vertically */
+    justify-content: space-between; /* Add space between the image and content */
+    gap: 20px; /* Add spacing between items */
+  }
+
+  .chairman .image {
+    flex: 1 1 40%; /* Allow the image to take 40% of the width */
+    max-width: 400px; /* Set a maximum width for the image */
+	
+  }
+
+  .chairman .content {
+    flex: 1 1 55%; /* Allow the content to take 55% of the width */
+    text-align: left; /* Align text to the left */
+  }
+
+}
+@media (max-width: 450px) and (orientation: landscape) {
+  img[src="images/logos.jpeg"] {
+    max-width: 50%; /* Adjust the width to fit better */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure proper alignment */
+    margin: 0 auto; /* Center the image */
+  }
+  .about .container {
+		display: flex;
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center-align content */
+
+
+}
+
+    .about .container .about-content {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+.proprietress .container {
+    display: flex; /* Enable flexbox for side-by-side layout */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    align-items: flex-start; /* Align items vertically */
+    justify-content: space-between; /* Add space between the image and content */
+    gap: 20px; /* Add spacing between items */
+  }
+
+  .proprietress .image {
+    flex: 1 1 40%; /* Allow the image to take 40% of the width */
+    max-width: 400px; /* Set a maximum width for the image */
+	
+  }
+
+  .proprietress .content {
+    flex: 1 1 55%; /* Allow the content to take 55% of the width */
+    text-align: left; /* Align text to the left */
+  }
+  
+.chairman .container {
+    display: flex; /* Enable flexbox for side-by-side layout */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    align-items: flex-start; /* Align items vertically */
+    justify-content: space-between; /* Add space between the image and content */
+    gap: 20px; /* Add spacing between items */
+  }
+
+  .chairman .image {
+    flex: 1 1 40%; /* Allow the image to take 40% of the width */
+    max-width: 400px; /* Set a maximum width for the image */
+	
+  }
+
+  .chairman .content {
+    flex: 1 1 55%; /* Allow the content to take 55% of the width */
+    text-align: left; /* Align text to the left */
+  }
+}
+@media (max-width: 480px) and (orientation: landscape) {
+  img[src="images/logos.jpeg"] {
+    max-width: 50%; /* Adjust the width to fit better */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure proper alignment */
+    margin: 0 auto; /* Center the image */
+  }
+  .about .container {
+		display: flex;
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center-align content */
+
+
+}
+
+    .about .container .about-content {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+.proprietress .container {
+    display: flex; /* Enable flexbox for side-by-side layout */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    align-items: flex-start; /* Align items vertically */
+    justify-content: space-between; /* Add space between the image and content */
+    gap: 20px; /* Add spacing between items */
+  }
+
+  .proprietress .image {
+    flex: 1 1 40%; /* Allow the image to take 40% of the width */
+    max-width: 400px; /* Set a maximum width for the image */
+	
+  }
+
+  .proprietress .content {
+    flex: 1 1 55%; /* Allow the content to take 55% of the width */
+    text-align: left; /* Align text to the left */
+  }
+  
+.chairman .container {
+    display: flex; /* Enable flexbox for side-by-side layout */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    align-items: flex-start; /* Align items vertically */
+    justify-content: space-between; /* Add space between the image and content */
+    gap: 20px; /* Add spacing between items */
+  }
+
+  .chairman .image {
+    flex: 1 1 40%; /* Allow the image to take 40% of the width */
+    max-width: 400px; /* Set a maximum width for the image */
+	
+  }
+
+  .chairman .content {
+    flex: 1 1 55%; /* Allow the content to take 55% of the width */
+    text-align: left; /* Align text to the left */
+  }
+}
+
+@media (max-width: 390px) and (orientation: landscape) {
+  img[src="images/logos.jpeg"] {
+    max-width: 50%; /* Adjust the width to fit better */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure proper alignment */
+    margin: 0 auto; /* Center the image */
+  }
+  .about .container {
+		display: flex;
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center-align content */
+
+
+}
+
+    .about .container .about-content {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+.proprietress .container {
+    display: flex; /* Enable flexbox for side-by-side layout */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    align-items: flex-start; /* Align items vertically */
+    justify-content: space-between; /* Add space between the image and content */
+    gap: 20px; /* Add spacing between items */
+  }
+
+  .proprietress .image {
+    flex: 1 1 40%; /* Allow the image to take 40% of the width */
+    max-width: 400px; /* Set a maximum width for the image */
+	
+  }
+
+  .proprietress .content {
+    flex: 1 1 55%; /* Allow the content to take 55% of the width */
+    text-align: left; /* Align text to the left */
+  }
+  
+.chairman .container {
+    display: flex; /* Enable flexbox for side-by-side layout */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    align-items: flex-start; /* Align items vertically */
+    justify-content: space-between; /* Add space between the image and content */
+    gap: 20px; /* Add spacing between items */
+  }
+
+  .chairman .image {
+    flex: 1 1 40%; /* Allow the image to take 40% of the width */
+    max-width: 400px; /* Set a maximum width for the image */
+	
+  }
+
+  .chairman .content {
+    flex: 1 1 55%; /* Allow the content to take 55% of the width */
+    text-align: left; /* Align text to the left */
+  }
+}
+
 @media (max-width:991px) {
 
 html {
@@ -844,6 +1281,7 @@ section {
 	font-size: 3rem;
 }
 
+
 .about .container .about-content {
 	padding-left: 0;
 }
@@ -853,4 +1291,72 @@ section {
 html {
 	font-size: 50%;
 }
+}
+@media (max-width: 480px) {
+  .school-name, .phone-number, .apply-now-btn {
+    font-size: 11px;
+  }
+
+  .logo {
+  max-width: 100%;
+  height: auto;
+}
+
+
+  .apply-now-btn {
+    padding: 4px 8px;
+  }
+
+  .menu-icon {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 390px) {
+  .school-name {
+    font-size: 11px;
+  }
+
+  .phone-number {
+    font-size: 11px;
+  }
+
+  .apply-now-btn {
+    font-size: 11px;
+    padding: 4px 6px;
+  }
+
+  .logos {
+  max-width: 100%;
+  height: auto;
+}
+
+  .header {
+    gap: 6px;
+  }
+}
+@media (max-width: 320px) {
+  /* Add styles for very small screens */
+  html {
+    font-size: 45%; /* Further reduce font size */
+  }
+
+  .header {
+    padding: 0.5rem; /* Reduce padding */
+  }
+
+  .about .container {
+    flex-direction: column; /* Stack items vertically */
+  }
+}
+
+@media (max-width: 1024px) {
+  /* Add styles for tablets */
+  .header {
+    padding: 1.5rem 3rem;
+  }
+
+  .about .container {
+    flex-direction: row; /* Ensure side-by-side layout */
+  }
 }
